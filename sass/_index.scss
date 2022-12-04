@@ -1,0 +1,275 @@
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cheesenaan1.jpg" );
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .hero__container {
+    height: 100%;
+  }
+
+  
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 20px 150px;
+  padding: 100px 200px;
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__desc {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+// .card__desc::after {
+//   position: absolute;
+//   top: 25px;
+//   left: 0;
+//   content: "";
+//   width: 0%;
+//   height: 3px;
+//   background-color: rgba(255, 255, 255, 0.6);
+//   transition: all 0.5s;
+// }
+
+.card__desc:hover::after {
+  width: 100%;
+}
+
+
+
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+
+.card-1 {
+  background: radial-gradient(#413f3f,$secondary-color, );
+}
+
+.card__text{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:10px; 
+  line-height:50px;
+  justify-content:center;
+  text-align:center;
+}
+
+// food card
+.foodCard__container {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 35px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  .foodCard {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+
+    .face {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.face1 {
+        box-sizing: border-box;
+        padding: 20px;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+        }
+
+        .foodCard__1 {
+          background-color: $primary-color;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .foodCard__2 {
+          background-color: $primary-color;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .foodCard__3 {
+          background-color: $primary-color;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &.face2 {
+        transition: 0.5s;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 2em;
+          color: #fff;
+          transition: 0.5s;
+          text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          z-index: 10;
+        }
+      }
+    }
+  }
+
+  .foodCard:hover .face.face2 {
+    height: 60px;
+
+    h2 {
+      font-size: 2em;
+    }
+  }
+
+  .foodCard:nth-child(1) .face.face2 {
+    background-image: url('../img/nasi2.jpg');
+    border-radius: 15px;
+  }
+
+  .foodCard:nth-child(2) .face.face2 {
+    background-image: url('../img/roti3.jpg');
+    border-radius: 15px;
+  }
+
+  .foodCard:nth-child(3) .face.face2 {
+    background-image: url('../img/teh2.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+  }
+}
+
+
+
+
+.footer {
+  position: relative;
+  max-width: 100vw  ;
+  background: $secondary-color;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top:100px;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("../img/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+.video__container{
+  position:fixed;
+  bottom:0;
+  left:10px;
+  z-index:9999999;
+}

@@ -459,6 +459,10 @@
   position: relative;
   bottom: 90px;
   margin-bottom: 150px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 50px;
 }
 
 .joinUs__container .attribution {
@@ -538,6 +542,7 @@
 
 .joinUs__container .orange {
   border-top: 3px solid #000000;
+  word-break: break-word;
 }
 
 .joinUs__container .orange img {
@@ -793,7 +798,7 @@
   width: 182px;
 }
 
-.course {
+.location {
   background-color: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -807,25 +812,25 @@
   width: 700px;
 }
 
-.course h6 {
+.location h6 {
   opacity: 0.6;
   margin: 0;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.course h2 {
+.location h2 {
   letter-spacing: 1px;
   margin: 10px 0;
 }
 
-.course-preview {
+.location-image {
   background-color: #2A265F;
   color: #fff;
   max-width: 250px;
 }
 
-.course-preview a {
+.location-image a {
   color: #fff;
   display: inline-block;
   font-size: 12px;
@@ -834,7 +839,7 @@
   text-decoration: none;
 }
 
-.course-info {
+.location-info {
   padding: 30px;
   position: relative;
   width: 100%;
@@ -1241,3 +1246,73 @@ body {
   border: solid 2px #FCE205;
 }
 /*# sourceMappingURL=main.css.map */
+
+.joinUs__card label{
+  position:absolute;
+}
+
+.joinUs__card {
+  
+	position: relative;
+	margin: 16px;
+	width: 100%;
+	border: 1px solid #000000;
+	border-radius: 6px;
+	box-shadow: 0 4px 2px -2px #afafaf;
+}
+
+.card-data {
+	padding: 16px 70px;
+}
+
+.card-data h3 {
+	font-size: 32px;
+	color: #000000;
+	margin-top: 32px;
+	margin-bottom: 0;
+}
+
+.card-data form ul {
+	list-style: none;
+	padding: 0;
+	margin: 32px 0;
+}
+.card-data form ul li {
+	margin: 16px 0;
+}
+.card-data form ul li i {
+	display: inline-block;
+	vertical-align: bottom;
+	border: 1px solid #000000;
+	padding: 7px 8px;
+	width: 12%;
+	text-align: center;
+	color: #ffffff;
+	background-color: #000000;
+}
+.card-data input[type="text"] {
+	width: 71%;
+	border: 1px solid #000000;
+	padding: 8px 8px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000000;
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 12px;
+	opacity: .5;
+}
+.btn--secondary {
+	background-color: #000000;
+	border-radius: 5px;
+	color: white;
+	height: 40px;
+	padding: 8px 16px;
+	font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
+.btn--secondary:hover {
+  border-radius: soid 3px #000000;
+  background-color: #FCE205;
+  color:#000000;
+}
